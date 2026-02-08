@@ -1,225 +1,183 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="zh-TW">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>源自雲林的土地記憶｜工科嚴選農產直售</title>
-
+    <title>雲林耕讀人家｜工科嚴選．阿嬤百貨</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
-
     <style>
-        body {
-            font-family: 'Noto Sans TC', sans-serif;
-        }
-
-        .serif {
-            font-family: 'Noto Serif TC', serif;
-        }
-
-        .hero-gradient {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://lh3.googleusercontent.com/d/1oAn9w4jhyE1kzFkYoPAJfwBhPMA6u9wF'); /* 請確認權限開啟 */
+        body { font-family: 'Noto Sans TC', sans-serif; scroll-behavior: smooth; background-color: #fdfbf7; }
+        .serif { font-family: 'Noto Serif TC', serif; }
+        .glass { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(10px); }
+        /* 首頁背景圖改為讀取你的 story 照片 */
+        .hero-bg {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('story.jpg');
             background-size: cover;
             background-position: center;
         }
-
-        .swiper-button-next, .swiper-button-prev {
-            color: #b45309 !important;
-        }
-
-        .swiper-pagination-bullet-active {
-            background: #b45309 !important;
-        }
-        /* 彈窗動畫 */
-        .modal-active {
-            overflow: hidden;
-        }
-
-        @keyframes zoomIn {
-            from {
-                opacity: 0;
-                transform: scale(0.95);
-            }
-
-            to {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-
-        .animate-zoom {
-            animation: zoomIn 0.3s ease-out;
-        }
     </style>
 </head>
-<body class="bg-stone-50 text-gray-800">
+<body>
 
-    <header class="hero-gradient h-[60vh] flex items-center justify-center text-center text-white px-4">
-        <div class="max-w-4xl">
-            <h1 class="serif text-4xl md:text-6xl mb-6 tracking-wider leading-tight">用數據，守護土地的尊嚴</h1>
-            <p class="text-xl md:text-2xl font-light opacity-90 tracking-widest">從雲林農村到交大電子所｜跨越階級的農業實踐</p>
+    <nav class="fixed top-0 w-full z-50 glass shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="serif text-2xl font-bold text-green-900">雲林耕讀人家</div>
+            <div class="hidden md:flex space-x-8 font-medium text-stone-600">
+                <a href="#about" class="hover:text-green-700 transition">品牌故事</a>
+                <a href="#shop" class="hover:text-green-700 transition">嚴選商場</a>
+                <a href="#info" class="hover:text-green-700 transition">取貨流程</a>
+            </div>
+            <a href="#order" class="bg-green-800 text-white px-6 py-2 rounded-full hover:scale-105 transition shadow-lg">下單預約</a>
+        </div>
+    </nav>
+
+    <header class="hero-bg h-screen flex items-center justify-center text-center text-white px-4">
+        <div data-aos="fade-up" data-aos-duration="1000">
+            <h1 class="serif text-5xl md:text-8xl mb-6 tracking-widest">工科嚴選</h1>
+            <p class="text-xl md:text-2xl font-light opacity-90 tracking-wide underline decoration-yellow-500 underline-offset-8">用數據找回土地尊嚴 ‧ 一手交錢一手交貨</p>
         </div>
     </header>
 
-    <section class="py-24 px-4 max-w-5xl mx-auto border-b border-stone-200">
+    <section id="about" class="py-32 max-w-6xl mx-auto px-6">
         <div class="grid md:grid-cols-2 gap-16 items-center">
-            <div class="space-y-6 order-2 md:order-1">
-                <h2 class="serif text-3xl text-green-900 font-bold">起點，是風雨交加的夜</h2>
-                <div class="text-gray-600 leading-relaxed space-y-4 border-l-4 border-green-700 pl-6 italic text-lg text-justify">
-                    <p>「我是來自雲林土生土長的農村孩子，從小便跟著父母親務農，切身體會到農夫在風吹日曬下看天吃飯的無助。」</p>
-                    <p>「看到颱風將收成付之一炬，還要面對中盤商的剝削，我告訴自己得刻苦學習。我相信努力可以讓自己階級轉換，提升家人水平。」</p>
-                </div>
+            <div data-aos="fade-right">
+                <img src="story.jpg" class="rounded-3xl shadow-2xl w-full h-auto" alt="耕讀故事">
+            </div>
+            <div data-aos="fade-left" class="space-y-6">
+                <h2 class="serif text-4xl text-green-900 font-bold">品牌故事</h2>
+                <p class="text-gray-600 leading-loose text-lg italic border-l-4 border-yellow-600 pl-6">
+                    「我是來自雲林土生土長的農村孩子。我相信努力可以轉換階級，但我更希望透過專業，讓家鄉的勞動換回應有的尊嚴。」
+                </p>
                 <p class="text-gray-700 leading-loose text-justify">
-                    現在，我帶著電子所實驗室的嚴謹回到家鄉。我架起這個網頁，是為了繞過層層剝削的體制，將父親辛苦栽種、經過精準規格篩選的農產直接送到您手中。這不僅是為了生活，更是為了讓勞動換回應有的尊嚴。
+                    身為交大電子所研究生，我將實驗室的嚴謹帶回田間。我們拒絕中盤商剝削，堅持數據化品質篩選，並以最純粹的「一手交錢一手交貨」建立誠信連結。
                 </p>
             </div>
-            <div class="rounded-3xl overflow-hidden shadow-2xl border-8 border-white order-1 md:order-2">
-                <img src="https://lh3.googleusercontent.com/d/1Ssn-buMXI1oNE6CBCvqQCd6uFfm30KwU" class="w-full h-full object-cover" alt="雲林農村故事照片">
-            </div>
         </div>
     </section>
 
-    <section class="py-20 bg-white px-4">
-        <div class="max-w-6xl mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="serif text-3xl text-green-900 mb-4 font-bold">工程師標準的嚴選農產</h2>
-                <p class="text-gray-500 italic">點擊下方產品卡片查看詳細「團購規格與說明」</p>
-            </div>
+    <section id="shop" class="py-32 bg-stone-100 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="serif text-4xl text-center text-green-900 mb-20" data-aos="fade-up">今日嚴選品項</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
 
-            <div class="grid md:grid-cols-2 gap-12">
-                <div onclick="openModal()" class="bg-stone-50 rounded-3xl overflow-hidden shadow-sm hover:shadow-xl transition duration-300 cursor-pointer group relative">
-                    <div class="swiper bananaSwiper h-80">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide"><img src="https://lh3.googleusercontent.com/u/0/d/1oAn9w4jhyE1kzFkYoPAJfwBhPMA6u9wF" class="w-full h-full object-contain bg-stone-100"></div>
-                            <div class="swiper-slide"><img src="https://lh3.googleusercontent.com/d/1zbnSg_rVBPRwn-ubLnvhWmxAYpJ7Oqdi" class="w-full h-full object-contain bg-stone-100"></div>
-                        </div>
-                        <div class="swiper-pagination"></div>
-                    </div>
-                    <div class="p-8">
-                        <div class="flex justify-between items-start mb-4">
-                            <h3 class="serif text-2xl text-yellow-700 font-bold">雲林山線．嚴選北蕉</h3>
-                            <span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded">查看詳情</span>
-                        </div>
-                        <p class="text-gray-600 text-sm leading-relaxed mb-4">每一串皆經過電子游標卡尺篩選與糖度檢測，確保果肉細緻且自然香甜。</p>
-                        <div class="flex justify-between py-3 border-t border-stone-200 text-sm">
-                            <span class="text-stone-400 font-bold uppercase">技術指標</span>
-                            <span class="text-amber-800 font-bold tracking-widest">Brix 20°+ | 精準熟度控管</span>
-                        </div>
-                    </div>
+                <div data-aos="fade-up" onclick="openModal('嚴選北蕉', 'NT$ 550 / 箱', '外銷等級，Brix 20°+，口感細緻。')" class="bg-white p-4 rounded-2xl shadow-sm hover:shadow-xl transition cursor-pointer group">
+                    <img src="https://images.unsplash.com/photo-1528825871115-3581a5387919?w=400" class="w-full h-48 object-cover rounded-xl mb-4 group-hover:scale-105 transition">
+                    <h3 class="font-bold text-lg">雲林山線．北蕉</h3>
+                    <p class="text-yellow-700 font-bold">NT$ 550</p>
                 </div>
 
-                <div class="bg-stone-50 rounded-3xl overflow-hidden shadow-sm hover:shadow-lg transition duration-300">
-                    <div class="h-80 overflow-hidden bg-green-50">
-                        <img src="https://images.unsplash.com/photo-1551754655-cd27e38d2076?auto=format&fit=crop&q=80&w=800" class="w-full h-full object-cover">
+                <div data-aos="fade-up" data-aos-delay="100" onclick="openModal('水果玉米', 'NT$ 400 / 10穗', '晨採直送，爆汁清甜，生食級品質。')" class="bg-white p-4 rounded-2xl shadow-sm hover:shadow-xl transition cursor-pointer group">
+                    <img src="https://images.unsplash.com/photo-1551754655-cd27e38d2076?w=400" class="w-full h-48 object-cover rounded-xl mb-4 group-hover:scale-105 transition">
+                    <h3 class="font-bold text-lg">晨採．水果玉米</h3>
+                    <p class="text-yellow-700 font-bold">NT$ 400</p>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="200" onclick="openModal('優選柑橘', '時價', '產地直發，皮薄多汁，酸甜比例完美。')" class="bg-white p-4 rounded-2xl shadow-sm hover:shadow-xl transition cursor-pointer group">
+                    <img src="orange01.jpg" class="w-full h-48 object-cover rounded-xl mb-4 group-hover:scale-105 transition">
+                    <h3 class="font-bold text-lg">季節限定．柑橘</h3>
+                    <p class="text-yellow-700 font-bold">時價</p>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="300" onclick="openModal('產地酪梨', '時價', '自然農法，油脂豐富，營養價值極高。')" class="bg-white p-4 rounded-2xl shadow-sm hover:shadow-xl transition cursor-pointer group">
+                    <img src="avocado.jpg" class="w-full h-48 object-cover rounded-xl mb-4 group-hover:scale-105 transition">
+                    <h3 class="font-bold text-lg">厚實．產地酪梨</h3>
+                    <p class="text-yellow-700 font-bold">時價</p>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="400" onclick="openModal('阿嬤的二手百貨', '隨喜/標價', '惜物愛物，生活好物，舊物翻新重現價值。')" class="bg-white p-4 rounded-2xl shadow-sm hover:shadow-xl transition cursor-pointer group border-2 border-dashed border-stone-300">
+                    <div class="h-48 bg-stone-100 rounded-xl mb-4 flex items-center justify-center text-4xl group-hover:scale-110 transition">🎁</div>
+                    <h3 class="font-bold text-lg italic">阿嬤的二手百貨</h3>
+                    <p class="text-stone-400">挖寶趣</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="info" class="py-24 px-6 bg-white">
+        <div class="max-w-4xl mx-auto bg-green-900 rounded-[3rem] p-12 text-white shadow-2xl text-center relative overflow-hidden">
+            <div class="relative z-10">
+                <h2 class="serif text-3xl mb-8">交易流程：定點誠信交易</h2>
+                <div class="grid md:grid-cols-2 gap-8 text-left">
+                    <div class="p-6 border border-white/20 rounded-2xl hover:bg-white/5 transition">
+                        <p class="font-bold text-xl mb-2 text-yellow-400">📍 定點限時 2 hr</p>
+                        <p class="text-sm opacity-80 leading-relaxed">為確保農產鮮度，我們採取定點限時取貨（例如：週六 14:00-16:00），請準時抵達。</p>
                     </div>
-                    <div class="p-8">
-                        <h3 class="serif text-2xl mb-4 text-green-700 font-bold">晨採．水果玉米</h3>
-                        <p class="text-gray-600 text-sm mb-6 leading-relaxed">清晨三點鎖水採收。單穗重量經電子秤重（350g+），確保每一口都是清甜爆汁的最優質等級。</p>
-                        <div class="flex justify-between py-3 border-t border-stone-200 text-sm">
-                            <span class="text-stone-400 font-bold uppercase">技術指標</span>
-                            <span class="text-green-800 font-bold tracking-widest">單穗 350g+ | 產地直送</span>
-                        </div>
+                    <div class="p-6 border border-white/20 rounded-2xl hover:bg-white/5 transition">
+                        <p class="font-bold text-xl mb-2 text-yellow-400">🤝 一手交錢一手交貨</p>
+                        <p class="text-sm opacity-80 leading-relaxed">現場確認品質無誤後付款。這不僅是交易，更是農村最古老的誠信關係。</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="order" class="py-24 bg-stone-100 px-4">
-        <div class="max-w-4xl mx-auto text-center">
-            <h2 class="serif text-3xl mb-4 text-green-900 font-bold underline decoration-yellow-500 underline-offset-8">預約訂購單</h2>
-            <p class="text-gray-600 mt-6 mb-10">資料填寫後將自動匯入後台，我會親自確認訂單詳情並與您聯繫。</p>
-            <div class="rounded-3xl overflow-hidden shadow-2xl bg-white">
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc3df4uEvUguxLl5LnC99kMo7LTd1tuH92pczMcJTS5gJJMJg/viewform?embedded=true"
-                        width="100%" height="900" frameborder="0">
-                    載入中…
-                </iframe>
-            </div>
+    <section id="order" class="py-24 px-6 max-w-4xl mx-auto">
+        <div class="rounded-3xl overflow-hidden shadow-2xl border border-stone-100 h-[800px]">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc3df4uEvUguxLl5LnC99kMo7LTd1tuH92pczMcJTS5gJJMJg/viewform?embedded=true"
+                    width="100%" height="100%" frameborder="0">載入中…</iframe>
         </div>
     </section>
 
-    <footer class="py-20 bg-green-900 text-white text-center px-4">
-        <div class="max-w-2xl mx-auto">
-            <h3 class="serif text-2xl mb-8 tracking-widest">支持公平貿易，減少中間剝削</h3>
-            <div class="flex flex-col md:flex-row justify-center gap-12 mb-12">
+    <footer class="py-20 bg-stone-900 text-stone-400 text-center px-6">
+        <div class="max-w-4xl mx-auto space-y-6">
+            <div class="flex flex-col md:flex-row justify-center gap-8 md:gap-16">
                 <div>
-                    <p class="text-xs opacity-50 uppercase tracking-widest mb-1">聯絡電話</p>
-                    <a href="tel:0965630070" class="text-2xl font-medium hover:text-yellow-400">0965-630-070</a>
+                    <p class="text-xs uppercase tracking-widest mb-2 opacity-50">聯絡電話</p>
+                    <a href="tel:0965563070" class="text-xl text-white font-medium hover:text-yellow-500 transition">0965-563-070</a>
                 </div>
                 <div>
-                    <p class="text-xs opacity-50 uppercase tracking-widest mb-1">聯絡信箱</p>
-                    <a href="mailto:ctw.ee14@nycu.edu.tw" class="text-xl font-medium hover:text-yellow-400 transition">ctw.ee14@nycu.edu.tw</a>
+                    <p class="text-xs uppercase tracking-widest mb-2 opacity-50">聯絡信箱</p>
+                    <a href="mailto:ctw.ee14@nycu.edu.tw" class="text-xl text-white font-medium hover:text-yellow-500 transition underline underline-offset-4 font-mono">ctw.ee14@nycu.edu.tw</a>
                 </div>
             </div>
-            <p class="text-sm opacity-40 font-light leading-relaxed font-mono">
-                國立陽明交通大學 電子研究所 碩士班實踐專案<br>
-                © 2026 雲林耕讀人家 - 工程師兒子的農業變革
-            </p>
+            <div class="pt-10 border-t border-white/10 text-[10px] tracking-widest uppercase">
+                <p>National Yang Ming Chiao Tung University | Master Project</p>
+                <p class="mt-2 opacity-30">© 2026 雲林耕讀人家 - 工程師兒子的農業變革</p>
+            </div>
         </div>
     </footer>
 
     <div id="productModal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
-        <div class="bg-white w-full max-w-2xl rounded-3xl overflow-hidden shadow-2xl animate-zoom">
-            <div class="bg-yellow-600 p-6 text-white flex justify-between items-center">
-                <h3 class="serif text-2xl font-bold tracking-widest text-balance uppercase">雲林山線．北蕉 團購說明</h3>
-                <button onclick="closeModal()" class="text-white hover:scale-110 transition text-3xl">&times;</button>
-            </div>
-            <div class="p-8">
-                <div class="border-2 border-stone-100 rounded-xl overflow-hidden mb-8">
-                    <table class="w-full text-left">
-                        <tr class="border-b border-stone-100">
-                            <th class="p-4 bg-stone-50 w-32 font-bold text-green-900 border-r border-stone-100">下單截止</th>
-                            <td class="p-4 text-red-600 font-bold underline decoration-double">115 年 2 月 9 日 (額滿提早結束)</td>
-                        </tr>
-                        <tr class="border-b border-stone-100">
-                            <th class="p-4 bg-stone-50 font-bold text-green-900 border-r border-stone-100">產品規格</th>
-                            <td class="p-4">外銷等級北蕉，約 15 公斤 (25斤) / 箱</td>
-                        </tr>
-                        <tr class="border-b border-stone-100">
-                            <th class="p-4 bg-stone-50 font-bold text-green-900 border-r border-stone-100">團購價格</th>
-                            <td class="p-4 font-bold text-xl text-stone-800 tracking-tighter">NT$ 550 / 箱 <span class="text-sm font-normal text-gray-400 italic">(支持公平貿易)</span></td>
-                        </tr>
-                        <tr>
-                            <th class="p-4 bg-stone-50 font-bold text-green-900 border-r border-stone-100">配送說明</th>
-                            <td class="p-4">產地採收後 24h 內直送，確保最高鮮度</td>
-                        </tr>
-                    </table>
+        <div class="bg-white w-full max-w-xl rounded-3xl overflow-hidden shadow-2xl animate-in zoom-in duration-300">
+            <div class="p-8 space-y-6 text-center">
+                <h3 id="modalTitle" class="serif text-3xl text-green-900 font-bold"></h3>
+                <p id="modalPrice" class="text-xl font-bold text-yellow-700"></p>
+                <div class="bg-stone-50 p-6 rounded-2xl text-left border border-stone-100">
+                    <h4 class="text-xs text-stone-400 font-bold mb-2 uppercase tracking-tighter">規格說明</h4>
+                    <p id="modalDesc" class="text-gray-700 leading-relaxed"></p>
+                    <ul class="mt-4 text-xs text-green-700 space-y-1">
+                        <li>• 定點 2 小時取貨</li>
+                        <li>• 現場確認品質再付款</li>
+                    </ul>
                 </div>
-                <div class="flex flex-col gap-4">
-                    <a href="#order" onclick="closeModal()" class="block w-full bg-green-800 text-white text-center font-bold py-4 rounded-xl hover:bg-green-900 shadow-lg transition">
-                        確定下單去填寫表單
-                    </a>
-                    <button onclick="closeModal()" class="text-stone-400 text-sm hover:underline">返回產品頁</button>
-                </div>
+                <button onclick="closeModal()" class="w-full py-4 bg-stone-100 rounded-xl font-bold hover:bg-stone-200 transition">關閉</button>
             </div>
         </div>
     </div>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        var swiper = new Swiper(".bananaSwiper", {
-            loop: true,
-            autoplay: { delay: 4000, disableOnInteraction: false },
-            pagination: { el: ".swiper-pagination", clickable: true },
-        });
+        AOS.init({ once: true });
 
-        function openModal() {
+        function openModal(title, price, desc) {
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalPrice').innerText = price;
+            document.getElementById('modalDesc').innerText = desc;
             document.getElementById('productModal').classList.remove('hidden');
-            document.body.classList.add('modal-active');
+            document.body.style.overflow = 'hidden';
         }
 
         function closeModal() {
             document.getElementById('productModal').classList.add('hidden');
-            document.body.classList.remove('modal-active');
+            document.body.style.overflow = 'auto';
         }
 
-        // 點擊背景關閉
         window.onclick = function (event) {
-            let modal = document.getElementById('productModal');
-            if (event.target == modal) { closeModal(); }
+            if (event.target == document.getElementById('productModal')) { closeModal(); }
         }
     </script>
-
 </body>
 </html>
