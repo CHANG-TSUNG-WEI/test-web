@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>雲林耕讀人家｜農產品行銷平台</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="StyleSheetcss.css">
+</head>
+<body>
+
+    <nav class="fixed top-0 w-full z-50 glass shadow-sm py-4 px-6 flex justify-between items-center">
+        <div class="serif text-2xl font-bold text-green-900 tracking-tight">雲林耕讀人家</div>
+        <div class="hidden md:flex space-x-6 text-stone-600 font-medium text-sm">
+            <a href="#about" class="hover:text-green-800 transition">品牌故事</a>
+            <a href="#shop" class="hover:text-green-800 transition">嚴選商場</a>
+            <a href="#info" class="hover:text-green-800 transition">交易說明</a>
+        </div>
+        <a href="#order" class="bg-green-800 text-white px-5 py-2 rounded-full text-sm hover:scale-105 transition shadow-md">下單預約</a>
+    </nav>
+
+    <header class="hero-bg h-screen flex items-center justify-center text-center">
+        <div data-aos="zoom-out" data-aos-duration="1200">
+            <h1 class="serif text-5xl md:text-7xl mb-6 tracking-widest text-white">耕讀雲林</h1>
+            <p class="text-xl md:text-2xl font-light opacity-90 tracking-widest text-white">從矽島實驗室回到故鄉田間的誠信滋味</p>
+        </div>
+    </header>
+
+    <section id="about" class="py-32 max-w-6xl mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div data-aos="fade-right">
+                <h2 class="serif text-4xl text-green-900 font-bold mb-6">農村孩子的變革</h2>
+                <p class="text-gray-600 leading-loose text-lg mb-6 italic border-l-4 border-yellow-600 pl-6 text-justify">
+                    「我是來自雲林的農村孩子，我將交大電子所實驗室的嚴謹帶回田間，讓每一份農產都能換回應有的價值。」
+                </p>
+                <div class="text-gray-700 leading-loose text-justify space-y-4">
+                    <p>當你思考著用什麼食材來照顧最愛的家人時，你要的其實很簡單，就是要健康。你的舌尖會誠實地告訴你，什麼是土地最天然的饋贈。健康的滋味，其實一直都在身邊。</p>
+                    <p>我們堅持在地精神，由生產者直接對接消費者，建立起人與土地之間最真實的連結。頂著烈日與泥土對話，只為將這份家鄉的溫暖，原封不動地送上你的餐桌。</p>
+                </div>
+            </div>
+            <div data-aos="fade-left" class="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3] bg-stone-200">
+                <img src="image/story01.jpg" class="w-full h-full object-cover" alt="品牌故事照片">
+            </div>
+        </div>
+    </section>
+
+    <section id="shop" class="py-24 bg-stone-100 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="serif text-4xl text-green-900 mb-4">今日嚴選品項</h2>
+                <p class="text-stone-400 font-mono text-xs tracking-widest uppercase">Selected Produce</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+                <div data-aos="fade-up" onclick="openModal('雲林山線．嚴選北蕉', 'NT$ 550 / 箱', '【商品介紹】\n冬季裡，陽光燦爛和熙，加上夜裡的天氣涼冷，使香蕉生長緩慢，果肉質地紮實且香氣濃郁。\n\n【商品規格】\n● 內容：約3.5兩以上/(18-20顆)/盒\n● 保存期限：冷藏 7天\n● 運送：定點取貨免運費', ['image/banana03.jpg'])" class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition p-4 cursor-pointer group">
+                    <img src="image/banana03.jpg" class="w-full h-40 object-cover rounded-xl mb-4 group-hover:scale-105 transition">
+                    <h3 class="font-bold">雲林山線．北蕉</h3>
+                    <p class="text-yellow-700 font-bold mt-2 font-mono">NT$ 550</p>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="100" onclick="openModal('產地直送．優選酪梨', '時價預約', '【商品介紹】\n富含健康油脂與森林奶油的美譽。我們採用的酪梨在樹上自然熟成，口感綿密滑順，適合製作沙拉或早午餐。\n\n【商品規格】\n● 重量：5台斤/盒 (約 4-6 顆)\n● 保存期限：室溫通風處熟化後冷藏 5 天\n● 運送：一手交錢，一手交貨', ['image/avocado01.jpg'])" class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition p-4 cursor-pointer group">
+                    <img src="image/avocado01.jpg" class="w-full h-40 object-cover rounded-xl mb-4 group-hover:scale-105 transition">
+                    <h3 class="font-bold">產地直送．酪梨</h3>
+                    <p class="text-yellow-700 font-bold mt-2 font-mono">時價</p>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="200" onclick="openModal('雲林在地．帝王柑', 'NT$ 450 / 盒', '【商品介紹】\n擁有橘子的外型與柳橙的清甜。皮薄肉細，甜而不膩帶有淡淡奶香，是全家人都能輕鬆享用的天然點心。\n\n【商品規格】\n● 內容：約 5 台斤 / 盒\n● 保存期限：冷藏可保存 14 天\n● 運送：定點取貨 2 小時限時交易', ['image/orange01.jpg'])" class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition p-4 cursor-pointer group">
+                    <img src="image/orange01.jpg" class="w-full h-40 object-cover rounded-xl mb-4 group-hover:scale-105 transition">
+                    <h3 class="font-bold">雲林在地．帝王柑</h3>
+                    <p class="text-yellow-700 font-bold mt-2 font-mono">NT$ 450</p>
+                </div>
+
+                <div data-aos="fade-up" data-aos-delay="300" onclick="openModal('阿嬤的二手百貨', '隨喜/標價', '【商品介紹】\n惜物愛物，舊物翻新。這裡有阿嬤的珍藏，等著有緣人來挖寶。\n\n【特別說明】\n● 現場驗貨，滿意再帶回家。', ['image/grandma01.jpg','image/grandma02.jpg'])" class="grandma-card p-4 cursor-pointer group">
+                    <div class="grandma-images mb-4">
+                        <img src="image/grandma01.jpg" alt="阿嬤百貨1">
+                        <img src="image/grandma02.jpg" class="second" alt="阿嬤百貨2">
+                    </div>
+                    <h3 class="font-bold italic text-stone-500 text-center">阿嬤的二手百貨</h3>
+                    <p class="text-stone-300 text-[10px] text-center font-bold underline">點我看珍藏</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="info" class="py-24 px-6 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="serif text-3xl text-center text-green-900 mb-12">交易說明：誠信與鮮度的堅持</h2>
+            <div class="grid md:grid-cols-2 gap-8 text-sm">
+                <div class="p-6 bg-stone-50 rounded-2xl border-l-4 border-green-800">
+                    <p class="font-bold text-green-900 mb-2">🤝 一手交錢，一手交貨</p>
+                    <p class="text-gray-600">請在約定定點取貨現場核對品質，滿意後再支付現金。這是我們對品質的自信，也是對您的承諾。</p>
+                </div>
+                <div class="p-6 bg-stone-50 rounded-2xl border-l-4 border-green-800">
+                    <p class="font-bold text-green-900 mb-2">📍 定點限時 2 hr 取貨</p>
+                    <p class="text-gray-600">為縮短農產品離開土地的時間，我們採取定點預約取貨，確保鮮度不流失。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="order" class="py-24 px-6 max-w-4xl mx-auto">
+        <div class="rounded-3xl overflow-hidden shadow-2xl h-[800px] border border-stone-100">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc3df4uEvUguxLl5LnC99kMo7LTd1tuH92pczMcJTS5gJJMJg/viewform?embedded=true" width="100%" height="100%" frameborder="0">載入中…</iframe>
+        </div>
+    </section>
+
+    <footer class="bg-stone-900 text-stone-400 py-16 px-6 text-center">
+        <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 pb-8 border-b border-white/10">
+            <div>
+                <p class="text-xs font-bold mb-2">聯絡電話</p>
+                <a href="tel:0965563070" class="text-xl text-white">0965-563-070</a>
+            </div>
+            <div>
+                <p class="text-xs font-bold mb-2">聯絡信箱</p>
+                <a href="mailto:ctw.ee14@nycu.edu.tw" class="text-xl text-white font-mono">ctw.ee14@nycu.edu.tw</a>
+            </div>
+        </div>
+        <p class="mt-8 text-[10px] opacity-30">© 2026 雲林耕讀人家 | National Yang Ming Chiao Tung University</p>
+    </footer>
+
+    <div id="productModal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm">
+        <div class="bg-white w-full max-w-xl rounded-3xl overflow-hidden shadow-2xl relative">
+            <div class="relative h-72 bg-stone-100 group">
+                <div id="modalImage" class="w-full h-full bg-cover bg-center"></div>
+                <div id="modalNav" class="absolute inset-0 flex justify-between items-center px-4 hidden">
+                    <button onclick="changeImg(-1)" class="bg-white/90 p-2 rounded-full shadow-lg hover:bg-green-800 hover:text-white transition">❮</button>
+                    <button onclick="changeImg(1)" class="bg-white/90 p-2 rounded-full shadow-lg hover:bg-green-800 hover:text-white transition">❯</button>
+                </div>
+            </div>
+            <div class="p-8 text-center space-y-4">
+                <h3 id="modalTitle" class="serif text-3xl text-green-900 font-bold"></h3>
+                <p id="modalPrice" class="text-xl font-bold text-yellow-700"></p>
+                <div class="bg-stone-50 p-6 rounded-2xl text-left border border-stone-100">
+                    <p id="modalDesc" class="text-gray-700 leading-relaxed text-sm"></p>
+                </div>
+                <button onclick="closeModal()" class="w-full bg-green-800 text-white py-4 rounded-xl font-bold hover:bg-green-900 transition">關閉視窗</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ once: true, duration: 800 });
+        let currentImgIndex = 0;
+        let activeImages = [];
+
+        function openModal(title, price, desc, imgArray) {
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalPrice').innerText = price;
+            // 處理換行符號
+            document.getElementById('modalDesc').innerHTML = desc.replace(/\n/g, '<br>');
+            activeImages = imgArray || [];
+            currentImgIndex = 0;
+            updateModalView();
+            document.getElementById('productModal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function updateModalView() {
+            const imgDiv = document.getElementById('modalImage');
+            const nav = document.getElementById('modalNav');
+            imgDiv.style.backgroundImage = `url('${activeImages[currentImgIndex]}')`;
+            if (activeImages.length > 1) nav.classList.remove('hidden');
+            else nav.classList.add('hidden');
+        }
+
+        function changeImg(dir) {
+            currentImgIndex = (currentImgIndex + dir + activeImages.length) % activeImages.length;
+            updateModalView();
+        }
+
+        function closeModal() {
+            document.getElementById('productModal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+    </script>
+</body>
+</html>
