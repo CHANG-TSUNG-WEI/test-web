@@ -3,112 +3,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>雲林耕讀人家｜工科嚴選．阿嬤百貨</title>
+    <title>雲林耕讀人家｜工科嚴選 ‧ 阿嬤二手百貨</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Noto Sans TC', sans-serif; scroll-behavior: smooth; background-color: #fdfbf7; }
-        .serif { font-family: 'Noto Serif TC', serif; }
-        .glass { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(10px); }
-        /* 首頁背景圖改為讀取你的 story 照片 */
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            scroll-behavior: smooth;
+            background-color: #fdfbf7;
+        }
+
+        .serif {
+            font-family: 'Noto Serif TC', serif;
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+        }
+
         .hero-bg {
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('story.jpg');
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://drive.google.com/uc?export=view&id=1Ssn-buMXI1oNE6CBCvqQCd6uFfm30KwU');
             background-size: cover;
             background-position: center;
+        }
+        /* 輪播圖過渡動畫 */
+        #modalImage {
+            transition: background-image 0.4s ease-in-out;
         }
     </style>
 </head>
 <body>
 
-    <nav class="fixed top-0 w-full z-50 glass shadow-sm">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="serif text-2xl font-bold text-green-900">雲林耕讀人家</div>
-            <div class="hidden md:flex space-x-8 font-medium text-stone-600">
-                <a href="#about" class="hover:text-green-700 transition">品牌故事</a>
-                <a href="#shop" class="hover:text-green-700 transition">嚴選商場</a>
-                <a href="#info" class="hover:text-green-700 transition">取貨流程</a>
-            </div>
-            <a href="#order" class="bg-green-800 text-white px-6 py-2 rounded-full hover:scale-105 transition shadow-lg">下單預約</a>
+    <nav class="fixed top-0 w-full z-50 glass shadow-sm py-4 px-6 flex justify-between items-center">
+        <div class="serif text-2xl font-bold text-green-900 tracking-tight">雲林耕讀人家</div>
+        <div class="hidden md:flex space-x-6 text-stone-600 font-medium text-sm">
+            <a href="#about" class="hover:text-green-800 transition">品牌故事</a>
+            <a href="#shop" class="hover:text-green-800 transition">嚴選商場</a>
+            <a href="#info" class="hover:text-green-800 transition">交易說明</a>
         </div>
+        <a href="#order" class="bg-green-800 text-white px-5 py-2 rounded-full text-sm hover:scale-105 transition shadow-md">下單預約</a>
     </nav>
 
-    <header class="hero-bg h-screen flex items-center justify-center text-center text-white px-4">
-        <div data-aos="fade-up" data-aos-duration="1000">
-            <h1 class="serif text-5xl md:text-8xl mb-6 tracking-widest">工科嚴選</h1>
-            <p class="text-xl md:text-2xl font-light opacity-90 tracking-wide underline decoration-yellow-500 underline-offset-8">用數據找回土地尊嚴 ‧ 一手交錢一手交貨</p>
+    <header id="about" class="pt-32 pb-20 px-6 max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div data-aos="fade-right">
+                <h1 class="serif text-4xl md:text-6xl text-green-900 mb-6 leading-tight">數據與土地的對話</h1>
+                <p class="text-gray-600 leading-loose text-lg mb-6 italic border-l-4 border-yellow-600 pl-6 text-justify">
+                    「我是來自雲林的農村孩子，我將交大電子所實驗室的嚴謹帶回田間，讓每一份農產都能換回應有的尊嚴。」
+                </p>
+                <p class="text-gray-700 leading-loose text-justify">
+                    我們堅持一手交錢、一手交貨。在這裡，交易回歸到最純粹的本質，建立起人與土地之間最真實的連結。
+                </p>
+            </div>
+            <div data-aos="fade-left" class="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3] bg-stone-200">
+                <img src="https://drive.google.com/uc?export=view&id=1Ssn-buMXI1oNE6CBCvqQCd6uFfm30KwU" class="w-full h-full object-cover">
+            </div>
         </div>
     </header>
 
-    <section id="about" class="py-32 max-w-6xl mx-auto px-6">
-        <div class="grid md:grid-cols-2 gap-16 items-center">
-            <div data-aos="fade-right">
-                <img src="story.jpg" class="rounded-3xl shadow-2xl w-full h-auto" alt="耕讀故事">
-            </div>
-            <div data-aos="fade-left" class="space-y-6">
-                <h2 class="serif text-4xl text-green-900 font-bold">品牌故事</h2>
-                <p class="text-gray-600 leading-loose text-lg italic border-l-4 border-yellow-600 pl-6">
-                    「我是來自雲林土生土長的農村孩子。我相信努力可以轉換階級，但我更希望透過專業，讓家鄉的勞動換回應有的尊嚴。」
-                </p>
-                <p class="text-gray-700 leading-loose text-justify">
-                    身為交大電子所研究生，我將實驗室的嚴謹帶回田間。我們拒絕中盤商剝削，堅持數據化品質篩選，並以最純粹的「一手交錢一手交貨」建立誠信連結。
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <section id="shop" class="py-32 bg-stone-100 px-6">
+    <section id="shop" class="py-24 bg-stone-100 px-6">
         <div class="max-w-7xl mx-auto">
-            <h2 class="serif text-4xl text-center text-green-900 mb-20" data-aos="fade-up">今日嚴選品項</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8">
+            <h2 class="serif text-4xl text-center text-green-900 mb-16" data-aos="fade-up">今日嚴選品項</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
 
-                <div data-aos="fade-up" onclick="openModal('嚴選北蕉', 'NT$ 550 / 箱', '外銷等級，Brix 20°+，口感細緻。')" class="bg-white p-4 rounded-2xl shadow-sm hover:shadow-xl transition cursor-pointer group">
-                    <img src="https://images.unsplash.com/photo-1528825871115-3581a5387919?w=400" class="w-full h-48 object-cover rounded-xl mb-4 group-hover:scale-105 transition">
-                    <h3 class="font-bold text-lg">雲林山線．北蕉</h3>
-                    <p class="text-yellow-700 font-bold">NT$ 550</p>
+                <div data-aos="fade-up" onclick="openModal('雲林山線．北蕉', 'NT$ 550 / 箱', '外銷等級，Brix 20°+，口感細緻。', ['https://images.unsplash.com/photo-1528825871115-3581a5387919?w=400'])" class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition p-4 cursor-pointer group">
+                    <img src="https://images.unsplash.com/photo-1528825871115-3581a5387919?w=400" class="w-full h-40 object-cover rounded-xl mb-4 group-hover:scale-105 transition">
+                    <h3 class="font-bold">雲林山線．北蕉</h3>
+                    <p class="text-yellow-700 font-bold mt-2 font-mono">NT$ 550</p>
                 </div>
 
-                <div data-aos="fade-up" data-aos-delay="100" onclick="openModal('水果玉米', 'NT$ 400 / 10穗', '晨採直送，爆汁清甜，生食級品質。')" class="bg-white p-4 rounded-2xl shadow-sm hover:shadow-xl transition cursor-pointer group">
-                    <img src="https://images.unsplash.com/photo-1551754655-cd27e38d2076?w=400" class="w-full h-48 object-cover rounded-xl mb-4 group-hover:scale-105 transition">
-                    <h3 class="font-bold text-lg">晨採．水果玉米</h3>
-                    <p class="text-yellow-700 font-bold">NT$ 400</p>
+                <div data-aos="fade-up" data-aos-delay="100" onclick="openModal('晨採．水果玉米', 'NT$ 400 / 10穗', '晨採直送，爆汁清甜，生食級品質。', ['https://images.unsplash.com/photo-1551754655-cd27e38d2076?w=400'])" class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition p-4 cursor-pointer group">
+                    <img src="https://images.unsplash.com/photo-1551754655-cd27e38d2076?w=400" class="w-full h-40 object-cover rounded-xl mb-4 group-hover:scale-105 transition">
+                    <h3 class="font-bold">晨採．水果玉米</h3>
+                    <p class="text-yellow-700 font-bold mt-2 font-mono">NT$ 400</p>
                 </div>
 
-                <div data-aos="fade-up" data-aos-delay="200" onclick="openModal('優選柑橘', '時價', '產地直發，皮薄多汁，酸甜比例完美。')" class="bg-white p-4 rounded-2xl shadow-sm hover:shadow-xl transition cursor-pointer group">
-                    <img src="orange01.jpg" class="w-full h-48 object-cover rounded-xl mb-4 group-hover:scale-105 transition">
-                    <h3 class="font-bold text-lg">季節限定．柑橘</h3>
-                    <p class="text-yellow-700 font-bold">時價</p>
+                <div data-aos="fade-up" data-aos-delay="200" onclick="openModal('季節限定．柑橘', '時價', '皮薄多汁，酸甜完美平衡。', ['https://images.unsplash.com/photo-1557800636-894a64c1696f?w=400'])" class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition p-4 cursor-pointer group">
+                    <img src="https://images.unsplash.com/photo-1557800636-894a64c1696f?w=400" class="w-full h-40 object-cover rounded-xl mb-4 group-hover:scale-105 transition">
+                    <h3 class="font-bold">季節限定．柑橘</h3>
+                    <p class="text-yellow-700 font-bold mt-2 font-mono">時價</p>
                 </div>
 
-                <div data-aos="fade-up" data-aos-delay="300" onclick="openModal('產地酪梨', '時價', '自然農法，油脂豐富，營養價值極高。')" class="bg-white p-4 rounded-2xl shadow-sm hover:shadow-xl transition cursor-pointer group">
-                    <img src="avocado.jpg" class="w-full h-48 object-cover rounded-xl mb-4 group-hover:scale-105 transition">
-                    <h3 class="font-bold text-lg">厚實．產地酪梨</h3>
-                    <p class="text-yellow-700 font-bold">時價</p>
+                <div data-aos="fade-up" data-aos-delay="300" onclick="openModal('產地直送．酪梨', '時價預約', '油脂豐富，營養首選。', ['https://drive.google.com/uc?export=view&id=1PMr5w-xqbWiDX9XGi8fWITosfZH7-l0Q'])" class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition p-4 cursor-pointer group">
+                    <img src="https://drive.google.com/uc?export=view&id=1PMr5w-xqbWiDX9XGi8fWITosfZH7-l0Q" class="w-full h-40 object-cover rounded-xl mb-4 group-hover:scale-105 transition">
+                    <h3 class="font-bold text-green-800">產地直送．酪梨</h3>
+                    <p class="text-yellow-700 font-bold mt-2 font-mono">時價</p>
                 </div>
 
-                <div data-aos="fade-up" data-aos-delay="400" onclick="openModal('阿嬤的二手百貨', '隨喜/標價', '惜物愛物，生活好物，舊物翻新重現價值。')" class="bg-white p-4 rounded-2xl shadow-sm hover:shadow-xl transition cursor-pointer group border-2 border-dashed border-stone-300">
-                    <div class="h-48 bg-stone-100 rounded-xl mb-4 flex items-center justify-center text-4xl group-hover:scale-110 transition">🎁</div>
-                    <h3 class="font-bold text-lg italic">阿嬤的二手百貨</h3>
-                    <p class="text-stone-400">挖寶趣</p>
+                <div data-aos="fade-up" data-aos-delay="400"
+                     onclick="openModal('阿嬤的二手百貨', '隨喜/標價', '生活老物、阿嬤的珍藏挖寶。點開可查看多張照片。', [
+                        'https://drive.google.com/uc?export=view&id=1Xrk-0E1HoCoa6dzQxdEPSTSPrRNsibFq',
+                        'https://drive.google.com/uc?export=view&id=1T2uKgZuMPE-42Ys33NLFKU6KBP_UGC-d'
+                     ])"
+                     class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition p-4 cursor-pointer group border-2 border-dashed border-stone-200">
+                    <div class="h-40 bg-stone-50 rounded-xl mb-4 flex items-center justify-center text-4xl grayscale group-hover:grayscale-0 transition">🎁</div>
+                    <h3 class="font-bold italic text-stone-500 text-center">阿嬤的二手百貨</h3>
+                    <p class="text-stone-300 text-xs text-center font-bold">點我看珍藏 (可左右滑動)</p>
                 </div>
-
             </div>
         </div>
     </section>
 
     <section id="info" class="py-24 px-6 bg-white">
-        <div class="max-w-4xl mx-auto bg-green-900 rounded-[3rem] p-12 text-white shadow-2xl text-center relative overflow-hidden">
-            <div class="relative z-10">
-                <h2 class="serif text-3xl mb-8">交易流程：定點誠信交易</h2>
-                <div class="grid md:grid-cols-2 gap-8 text-left">
-                    <div class="p-6 border border-white/20 rounded-2xl hover:bg-white/5 transition">
-                        <p class="font-bold text-xl mb-2 text-yellow-400">📍 定點限時 2 hr</p>
-                        <p class="text-sm opacity-80 leading-relaxed">為確保農產鮮度，我們採取定點限時取貨（例如：週六 14:00-16:00），請準時抵達。</p>
-                    </div>
-                    <div class="p-6 border border-white/20 rounded-2xl hover:bg-white/5 transition">
-                        <p class="font-bold text-xl mb-2 text-yellow-400">🤝 一手交錢一手交貨</p>
-                        <p class="text-sm opacity-80 leading-relaxed">現場確認品質無誤後付款。這不僅是交易，更是農村最古老的誠信關係。</p>
-                    </div>
+        <div class="max-w-4xl mx-auto bg-green-900 rounded-[3rem] p-12 text-white shadow-2xl text-center">
+            <h2 class="serif text-3xl mb-8">交易流程：定點誠信交易</h2>
+            <div class="grid md:grid-cols-2 gap-8 text-left">
+                <div class="p-6 border border-white/20 rounded-2xl hover:bg-white/5 transition">
+                    <p class="font-bold text-xl mb-2 text-yellow-400">📍 定點限時 2 hr</p>
+                    <p class="text-sm opacity-80 leading-relaxed">確保鮮度，採取定點限時取貨，請準時抵達。</p>
+                </div>
+                <div class="p-6 border border-white/20 rounded-2xl hover:bg-white/5 transition">
+                    <p class="font-bold text-xl mb-2 text-yellow-400">🤝 一手交錢一手交貨</p>
+                    <p class="text-sm opacity-80 leading-relaxed">現場確認品質無誤後付款。建立農村最純粹的誠信連結。</p>
                 </div>
             </div>
         </div>
@@ -116,8 +124,7 @@
 
     <section id="order" class="py-24 px-6 max-w-4xl mx-auto">
         <div class="rounded-3xl overflow-hidden shadow-2xl border border-stone-100 h-[800px]">
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc3df4uEvUguxLl5LnC99kMo7LTd1tuH92pczMcJTS5gJJMJg/viewform?embedded=true"
-                    width="100%" height="100%" frameborder="0">載入中…</iframe>
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc3df4uEvUguxLl5LnC99kMo7LTd1tuH92pczMcJTS5gJJMJg/viewform?embedded=true" width="100%" height="100%" frameborder="0">載入中…</iframe>
         </div>
     </section>
 
@@ -130,44 +137,85 @@
                 </div>
                 <div>
                     <p class="text-xs uppercase tracking-widest mb-2 opacity-50">聯絡信箱</p>
-                    <a href="mailto:ctw.ee14@nycu.edu.tw" class="text-xl text-white font-medium hover:text-yellow-500 transition underline underline-offset-4 font-mono">ctw.ee14@nycu.edu.tw</a>
+                    <a href="mailto:ctw.ee14@nycu.edu.tw" class="text-xl text-white font-medium hover:text-yellow-500 transition font-mono underline underline-offset-4">ctw.ee14@nycu.edu.tw</a>
                 </div>
             </div>
-            <div class="pt-10 border-t border-white/10 text-[10px] tracking-widest uppercase">
+            <div class="pt-10 border-t border-white/10 text-[10px] tracking-widest uppercase opacity-50">
                 <p>National Yang Ming Chiao Tung University | Master Project</p>
-                <p class="mt-2 opacity-30">© 2026 雲林耕讀人家 - 工程師兒子的農業變革</p>
+                <p class="mt-2">© 2026 雲林耕讀人家 | ALL RIGHTS RESERVED</p>
             </div>
         </div>
     </footer>
 
     <div id="productModal" class="fixed inset-0 z-[100] hidden flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
-        <div class="bg-white w-full max-w-xl rounded-3xl overflow-hidden shadow-2xl animate-in zoom-in duration-300">
+        <div class="bg-white w-full max-w-xl rounded-3xl overflow-hidden shadow-2xl relative">
+            <div class="relative h-72 bg-stone-100 group">
+                <div id="modalImage" class="w-full h-full bg-cover bg-center"></div>
+                <div id="modalNav" class="absolute inset-0 flex justify-between items-center px-4 opacity-0 group-hover:opacity-100 transition-opacity hidden">
+                    <button onclick="changeImg(-1)" class="bg-white/80 p-2 rounded-full shadow-md hover:bg-white transition text-green-900 font-bold">❮</button>
+                    <button onclick="changeImg(1)" class="bg-white/80 p-2 rounded-full shadow-md hover:bg-white transition text-green-900 font-bold">❯</button>
+                </div>
+                <div id="imgIndicator" class="absolute bottom-4 right-6 bg-black/50 text-white text-[10px] px-3 py-1 rounded-full hidden"></div>
+            </div>
+
             <div class="p-8 space-y-6 text-center">
                 <h3 id="modalTitle" class="serif text-3xl text-green-900 font-bold"></h3>
                 <p id="modalPrice" class="text-xl font-bold text-yellow-700"></p>
                 <div class="bg-stone-50 p-6 rounded-2xl text-left border border-stone-100">
-                    <h4 class="text-xs text-stone-400 font-bold mb-2 uppercase tracking-tighter">規格說明</h4>
                     <p id="modalDesc" class="text-gray-700 leading-relaxed"></p>
-                    <ul class="mt-4 text-xs text-green-700 space-y-1">
-                        <li>• 定點 2 小時取貨</li>
-                        <li>• 現場確認品質再付款</li>
+                    <ul class="mt-4 text-xs text-green-800 space-y-1 font-bold italic">
+                        <li>● 現場一手交錢、一手交貨</li>
+                        <li>● 定點取貨時段僅限 2 小時</li>
                     </ul>
                 </div>
-                <button onclick="closeModal()" class="w-full py-4 bg-stone-100 rounded-xl font-bold hover:bg-stone-200 transition">關閉</button>
+                <div class="flex gap-4">
+                    <a href="#order" onclick="closeModal()" class="flex-1 bg-green-800 text-white font-bold py-4 rounded-xl text-center shadow-lg">立即下單預約</a>
+                    <button onclick="closeModal()" class="px-8 border border-stone-200 rounded-xl font-bold text-stone-500 hover:bg-stone-50 transition">關閉</button>
+                </div>
             </div>
         </div>
     </div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init({ once: true });
+        AOS.init({ once: true, duration: 800 });
 
-        function openModal(title, price, desc) {
+        let currentImgIndex = 0;
+        let activeImages = [];
+
+        function openModal(title, price, desc, imgArray) {
             document.getElementById('modalTitle').innerText = title;
             document.getElementById('modalPrice').innerText = price;
             document.getElementById('modalDesc').innerText = desc;
+
+            activeImages = imgArray;
+            currentImgIndex = 0;
+            updateModalView();
+
             document.getElementById('productModal').classList.remove('hidden');
             document.body.style.overflow = 'hidden';
+        }
+
+        function updateModalView() {
+            const imgDiv = document.getElementById('modalImage');
+            const nav = document.getElementById('modalNav');
+            const indicator = document.getElementById('imgIndicator');
+
+            imgDiv.style.backgroundImage = `url('${activeImages[currentImgIndex]}')`;
+
+            if (activeImages.length > 1) {
+                nav.classList.remove('hidden');
+                indicator.classList.remove('hidden');
+                indicator.innerText = `${currentImgIndex + 1} / ${activeImages.length}`;
+            } else {
+                nav.classList.add('hidden');
+                indicator.classList.add('hidden');
+            }
+        }
+
+        function changeImg(dir) {
+            currentImgIndex = (currentImgIndex + dir + activeImages.length) % activeImages.length;
+            updateModalView();
         }
 
         function closeModal() {
